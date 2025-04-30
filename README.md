@@ -1,96 +1,110 @@
-# 🔐 SecureDocs - Government Document Sharing Platform
+# SecureShareFiles
 
-**SecureDocs** is a secure digital platform for storing and sharing government documents with family members. Built using **Vue**, **Tailwind.js**, and **javascript** **HTML** **CSS** with modern UI and backed by **Supabase** for secure storage and authentication.
+A secure document sharing platform built with React and Node.js, featuring secure authentication and file management capabilities.
 
-## 🚀 Features
+## Project Overview
 
-- 📝 Register & verify user via OTP
-- 🔐 Login with secure authentication
-- 📂 Upload, update, delete official documents
-- 👪 Share documents with family using Aadhaar link
-- 📋 Profile page showing Aadhaar-linked user details
-- 🌗 Dark mode for better readability
-- ⚙️ Supabase used for authentication, storage, and RLS
-- 🎨 Animations and smooth UI transitions
+SecureShareFiles is a modern web application that allows users to securely share and manage documents. The platform uses Supabase for authentication and file storage, providing a robust and secure solution for document management.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Frontend:**
-  - HTML5, CSS3, JavaScript (Vanilla)
-  - Modern animations and transitions
-  - Responsive design with accessibility features
+### Frontend
+- React 19
+- Vite
+- TailwindCSS
+- React Router DOM
+- React Dropzone
+- Framer Motion
+- React Toastify
+- Hero Icons
 
-- **Backend & Storage:**
-  - Supabase (Authentication, Realtime DB, Storage)
-  - Supabase Row-Level Security (RLS)
+### Backend
+- Node.js
+- Express.js
+- Supabase
+- Multer (for file uploads)
 
-## 🔐 Security & Privacy
+## Features
 
-- OTP-based email verification
-- Role-based access control using Supabase RLS
-- Encrypted storage of sensitive data
-- Document access controlled by linked Aadhaar number
+- Secure email-based OTP authentication
+- Document upload and management
+- Modern, responsive UI
+- Real-time notifications
+- Secure file storage
 
-## 🗃️ Functional Modules
-
-1. **Authentication**
-   - Register and login
-
-2. **Document Management**
-   - Upload, preview, update, delete, and share
-
-3. **Profile Management**
-   - View Aadhaar-linked personal details
-
-4. **Dashboard**
-   - Clean interface for document and user control
-
-## 🧭 Getting Started
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/Preyapradhan/SecureDocs.git
-cd SecureDocs
-```
-
-2. **Setup Supabase**
-- Go to [Supabase](https://supabase.com) and create a project
-- Setup authentication, storage buckets, and RLS rules
-- Copy your Supabase credentials into a `.env` file:
-```env
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_anon_key
-```
-
-3. **Start Development**
-- Open `index.html` with Live Server or use any static server.
-
-## 📁 Folder Structure
+## Project Structure
 
 ```
-project/
-├── css/                # Stylesheets
-├── js/                 # JavaScript modules
-├── assets/             # Logos and documents
-├── index.html          # Home/Login/Register
-├── dashboard.html      # User dashboard
-└── profile.html        # Profile info
+SecureShareFiles/
+├── frontend/
+│   └── secure-docs/          # React frontend application
+│       ├── src/              # Source files
+│       ├── public/           # Static assets
+│       └── package.json      # Frontend dependencies
+└── backend/
+    ├── routes/              # API routes
+    │   ├── authRoutes.js    # Authentication endpoints
+    │   └── docRoutes.js     # Document management endpoints
+    ├── config/              # Configuration files
+    └── server.js            # Main server file
 ```
 
-## 📦 Planned Improvements
+## Getting Started
 
-- 📲 Mobile-first optimization
-- 🧾 PDF preview & annotation support
-- 📬 Email notifications for shared documents
-- 🧪 Test cases and CI/CD deployment
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Supabase account
 
+### Backend Setup
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file with your Supabase credentials
+4. Start the server:
+   ```bash
+   npm start
+   ```
 
-## 🙏 Acknowledgments
+### Frontend Setup
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend/secure-docs
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-- Supabase for backend services
-- Aadhaar API (mock/integration)
-- UI references from gov portals
+## API Endpoints
+
+### Authentication
+- POST `/auth/login` - Request OTP login
+
+### Document Management
+- POST `/docs/upload` - Upload a document
+
+## Security Features
+
+- Email-based OTP authentication
+- Secure file storage using Supabase
+- CORS protection
+- Environment variable configuration
 
 ## 🎨 SecureDocs Images
 
 ![Screenshot 2025-04-22 151346](https://github.com/user-attachments/assets/22adef09-99a4-4d2f-ab32-e510b359b999)
+
+![Screenshot 2025-04-30 192908](https://github.com/user-attachments/assets/94b8a59c-7a75-480d-b0e6-92e909593e82)
+
+![Screenshot 2025-04-30 192516](https://github.com/user-attachments/assets/44be823b-7b20-48f1-b522-1e85e3c0adcb)
+
